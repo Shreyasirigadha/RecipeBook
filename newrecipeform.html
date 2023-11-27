@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        
+        .centered-box {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #file-label {
+            margin-bottom: 10px;
+        }
+
+        header {
+            
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+        }
+
+        body {
+            background-image: url('form6.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: beige;
+        }
+        label,input{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>New Recipes</h2>
+        <p>
+            Craft Your Culinary Masterpieces:<br>
+            Add Your Own Flavors to the Recipe of Life!</p>
+    </header>
+
+    <div id="form" class="centered-box">
+        <form id="dataform" action="new-recipes" enctype="multipart/form-data">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="cuisine">Cuisine</label><br>
+            <select id="cuisine" name="cuisine" required>
+                <option value="" disabled selected>Select a cuisine</option>
+                <option value="Indian">Indian</option>
+                <option value="American">American</option>
+                <option value="Korean">Korean</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Japanese">Japanese</option>
+            </select><br><br>
+
+        <div id="file-and-description-container">
+            <label id="file-label" for="file">Upload Your file (PDF or DOC only)</label><br><br>
+            <input type="file" id="file" name="file" accept=".pdf, .doc"><br><br>
+            <textarea id="description" name="description" rows="10" placeholder="Enter your recipe description..." required></textarea><br>
+        </div><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
